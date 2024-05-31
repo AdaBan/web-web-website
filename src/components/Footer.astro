@@ -2,6 +2,67 @@
 const today = new Date();
 ---
 
-<footer></footer>
-<style>
+<footer class="footer">
+  <div class="container container--wide">
+    <div class="footer__inner">
+      <h2 class="footer__logo">Webweb</h2>
+      <ul class="footer__links">
+        <li>
+          <a href="">Instagram</a>
+        </li>
+        <li>
+          <a href="">LinkedIn</a>
+        </li>
+        <li>
+          <a href="">Email</a>
+        </li>
+      </ul>
+      <p>Kod tej strony znajdziecie <a href="">na Githubie</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  .footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+
+    &__inner {
+      display: grid;
+      gap: 1rem;
+
+      @media (min-width: 768px) {
+        gap: 2rem;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: start;
+      }
+    }
+
+    &__logo {
+      font-size: inherit;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    a {
+      border-bottom: 1px solid;
+
+      &:hover {
+        border-bottom-color: var(--brand);
+      }
+    }
+
+    p {
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+    }
+  }
 </style>

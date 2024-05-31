@@ -54,15 +54,62 @@ h6 {
   overflow-wrap: break-word;
 }
 
+:root {
+  --brand: #ceff1a;
+  --brand-dark: #003b36;
+
+  --neutral-light: #F0F4EF;
+  /* 
+  --brand: #74CCFB;
+  --brand-dark: #151E3F; */
+}
+
 body {
+  background: #fff;
+  color: #171a21;
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
+  font-size: 1rem;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
-	max-width: 664px;
-	padding: 0 clamp(1rem, 5vw, 2rem);
-	margin: 0 auto;
+  max-width: 664px;
+  padding: 0 clamp(1rem, 5vw, 2rem);
+  margin: 0 auto;
+
+  &--wide {
+    max-width: 1078px;
+  }
 }
