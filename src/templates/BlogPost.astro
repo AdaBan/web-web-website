@@ -8,7 +8,7 @@ const { title, pubDate, updatedDate } = Astro.props;
 <BaseLayout>
   <div class="container">
     <header class="post-header">
-      <h1 class="post-header__title">{title}</h1>
+      <h1>{title}</h1>
       <p>Opublikowano: <FormattedDate date={pubDate} /></p>
       {
         updatedDate && (
@@ -30,14 +30,14 @@ const { title, pubDate, updatedDate } = Astro.props;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 3rem 0;
+    padding: 0 0 3rem;
     text-align: center;
 
-    &__title {
-      max-width: 20ch;
-      font-size: clamp(2rem, 6vw, 4rem);
-      line-height: 1.15;
-    }
+    // &__title {
+    //   max-width: 20ch;
+    //   font-size: clamp(2rem, 6vw, 4rem);
+    //   line-height: 1.15;
+    // }
   }
 
   .post-content {

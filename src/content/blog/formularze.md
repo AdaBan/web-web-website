@@ -1,6 +1,6 @@
 ---
 title: 'Jak zakodować przyjazny użytkownikom formularz?'
-description: 'Dowiedz się, jak poprawić UX formularza za pomocą pseudoselektorów CSS i kilku linijek kodu. Bez użycia Javascript!'
+description: '5 snippetów CSS, które poprawią UX Twoich formularzy'
 pubDate: '06/02/2024'
 tags:
   - HTML

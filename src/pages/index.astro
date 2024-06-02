@@ -23,11 +23,13 @@ const posts = (await getCollection("blog")).sort(
                 <FormattedDate date={post.data.pubDate} />
               </div>
 
-              <h3 class="post-card__title">
+              <h3 class="h2">
                 <a class="post-card__link" href={`/blog/${post.slug}/`}>
                   {post.data.title}
                 </a>
               </h3>
+
+              <p>{post.data.description}</p>
 
               {post.data?.tags ? (
                 <ul class="post-card__tags">
@@ -82,13 +84,6 @@ const posts = (await getCollection("blog")).sort(
 
     &__title {
       margin-bottom: 0;
-      font-size: 1.5rem;
-      line-height: 1.2;
-
-      @media (min-width: 768px) {
-        font-size: 3rem;
-        line-height: 1.1;
-      }
     }
 
     &__tags {

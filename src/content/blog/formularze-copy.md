@@ -1,11 +1,10 @@
 ---
-title: 'Jak zakodować przyjazny użytkownikom formularz?'
-description: 'Dowiedz się, jak poprawić UX formularza za pomocą pseudoselektorów CSS i kilku linijek kodu. Bez użycia Javascript!'
+title: "Walka wieczoru: etat vs freelance"
+description: "Czyli czego nauczyły mnie dwa lata bycia swoją własną szefową"
 pubDate: '06/02/2024'
 tags:
-  - HTML
-  - CSS
-  - Snippety
+  - Freelance
+  - Opinia
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

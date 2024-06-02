@@ -58,7 +58,7 @@ h6 {
   --brand: #ceff1a;
   --brand-dark: #003b36;
 
-  --neutral-light: #F0F4EF;
+  --neutral-light: #f0f4ef;
   /* 
   --brand: #74CCFB;
   --brand-dark: #151E3F; */
@@ -112,4 +112,31 @@ ul {
   &--wide {
     max-width: 1078px;
   }
+}
+
+%h1,
+h1,
+.h1 {
+  font-size: clamp(2.4414rem, 2.3353rem + 0.5307vi, 2.7466rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+%h2,
+h2,
+.h2 {
+  font-size: clamp(1.9531rem, 1.8682rem + 0.4246vi, 2.1973rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+%h3,
+h3,
+.h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
 }
