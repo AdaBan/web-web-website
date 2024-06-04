@@ -1,5 +1,5 @@
 ---
-title: "Walka wieczoru: etat vs freelance"
+title: "Etat vs freelance"
 description: "Czyli czego nauczyły mnie dwa lata bycia swoją własną szefową"
 pubDate: '06/02/2024'
 tags:

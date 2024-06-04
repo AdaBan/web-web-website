@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "../components/BaseLayout.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
 const { title, pubDate, updatedDate } = Astro.props;
@@ -9,16 +9,18 @@ const { title, pubDate, updatedDate } = Astro.props;
   <div class="container">
     <header class="post-header">
       <h1>{title}</h1>
-      <p>Opublikowano: <FormattedDate date={pubDate} /></p>
+      <p class="post-header__date">
+        Opublikowano: <FormattedDate date={pubDate} />
+      </p>
       {
         updatedDate && (
-          <p>
+          <p class="post-header__date">
             Ostatnie zmiany: <FormattedDate date={updatedDate} />
           </p>
         )
       }
     </header>
-    <div class="post-content">
+    <div class="rich-text">
       <slot />
     </div>
   </div>
@@ -33,16 +35,8 @@ const { title, pubDate, updatedDate } = Astro.props;
     padding: 0 0 3rem;
     text-align: center;
 
-    // &__title {
-    //   max-width: 20ch;
-    //   font-size: clamp(2rem, 6vw, 4rem);
-    //   line-height: 1.15;
-    // }
-  }
-
-  .post-content {
-    max-width: 50ch;
-    margin: 0 auto;
-    font-size: 1.25rem;
+    &__date {
+      font-size: 0.875rem;
+    }
   }
 </style>
