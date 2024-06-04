@@ -6,7 +6,16 @@ import HeaderLink from "./HeaderLink.astro";
   <div class="container container--wide">
     <div class="header__inner">
       <div class="header__logo">
-        <a href="/" aria-label="Strona główna Web Web Club">🕸️</a>
+        <a href="/" aria-label="Strona główna Web Web Club">
+          <div class="logo">
+            <span>w</span>
+            <span>e</span>
+            <span>b</span>
+            <span>w</span>
+            <span>e</span>
+            <span>b</span>
+          </div>
+        </a>
       </div>
 
       <nav class="nav">
@@ -29,8 +38,15 @@ import HeaderLink from "./HeaderLink.astro";
 
     &__inner {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      gap: 1.5rem;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     &__logo {
@@ -53,7 +69,6 @@ import HeaderLink from "./HeaderLink.astro";
   .nav {
     &__list {
       display: flex;
-      justify-content: flex-end;
       align-items: center;
       gap: 1rem;
       font-weight: 600;
@@ -61,6 +76,47 @@ import HeaderLink from "./HeaderLink.astro";
 
       @media (min-width: 768px) {
         gap: 1.5rem;
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+
+    span {
+      transition: 0.2s ease;
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        transform: rotate(6deg);
+      }
+
+      &:nth-child(2),
+      &:nth-child(5) {
+        transform: rotate(8deg);
+      }
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        transform: rotate(-8deg);
+      }
+    }
+
+    &:hover {
+      span {
+        &:nth-child(1),
+        &:nth-child(4) {
+          transform: rotate(-6deg);
+        }
+
+        &:nth-child(3),
+        &:nth-child(6) {
+          transform: rotate(6deg);
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 ---
-title: "Jak zakodować przyjazny użytkownikom formularz?"
+title: "Ostyluj formularz like it's 2024"
 description: "5 snippetów CSS, które poprawią UX Twoich formularzy"
 pubDate: "06/02/2024"
 tags:
