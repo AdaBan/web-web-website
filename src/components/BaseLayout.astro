@@ -4,12 +4,14 @@ import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={title} description={description} />
     <style lang="scss">
       .layout {
         display: flex;
